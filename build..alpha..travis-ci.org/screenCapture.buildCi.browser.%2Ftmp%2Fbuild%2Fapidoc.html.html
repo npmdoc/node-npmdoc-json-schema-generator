@@ -1,0 +1,1228 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/krg7880/json-schema-generator">json-schema-generator (v2.0.3)</a>
+</h1>
+<h4>JSON schema generator based on draft-v4.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator">module json-schema-generator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.json-schema-generator">
+            function <span class="apidocSignatureSpan"></span>json-schema-generator
+            <span class="apidocSignatureSpan">(json)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast">
+            function <span class="apidocSignatureSpan">json-schema-generator.</span>ast
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.compiler">
+            function <span class="apidocSignatureSpan">json-schema-generator.</span>compiler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.toString">
+            function <span class="apidocSignatureSpan">json-schema-generator.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">json-schema-generator.</span>ast.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">json-schema-generator.</span>compiler.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">json-schema-generator.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator.ast">module json-schema-generator.ast</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.ast">
+            function <span class="apidocSignatureSpan">json-schema-generator.</span>ast
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator.ast.prototype">module json-schema-generator.ast.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.prototype.build">
+            function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>build
+            <span class="apidocSignatureSpan">(json)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.prototype.buildArrayTree">
+            function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>buildArrayTree
+            <span class="apidocSignatureSpan">(tree, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.prototype.buildObjectTree">
+            function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>buildObjectTree
+            <span class="apidocSignatureSpan">(tree, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.prototype.buildPrimitive">
+            function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>buildPrimitive
+            <span class="apidocSignatureSpan">(tree, node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.prototype.generateHash">
+            function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>generateHash
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.ast.prototype.isAllSimilarObjects">
+            function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>isAllSimilarObjects
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator.compiler">module json-schema-generator.compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.compiler.compiler">
+            function <span class="apidocSignatureSpan">json-schema-generator.</span>compiler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator.compiler.prototype">module json-schema-generator.compiler.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.compiler.prototype.compile">
+            function <span class="apidocSignatureSpan">json-schema-generator.compiler.prototype.</span>compile
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.compiler.prototype.generate">
+            function <span class="apidocSignatureSpan">json-schema-generator.compiler.prototype.</span>generate
+            <span class="apidocSignatureSpan">(tree, schema, parent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator.toString">module json-schema-generator.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.toString.toString">
+            function <span class="apidocSignatureSpan">json-schema-generator.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-schema-generator.utils">module json-schema-generator.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.getType">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>getType
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isArray">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isArray
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isBoolean">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isBoolean
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isEqual">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isEqual
+            <span class="apidocSignatureSpan">(v1, v2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isFunction">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isFunction
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isNull">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isNull
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isNumber">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isNumber
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isObject">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isObject
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isString">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isString
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.isUndefined">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isUndefined
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.oneIsNull">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>oneIsNull
+            <span class="apidocSignatureSpan">(v1, v2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-schema-generator.utils.toObject">
+            function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>toObject
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator" id="apidoc.module.json-schema-generator">module json-schema-generator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.json-schema-generator" id="apidoc.element.json-schema-generator.json-schema-generator">
+        function <span class="apidocSignatureSpan"></span>json-schema-generator
+        <span class="apidocSignatureSpan">(json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json-schema-generator = function (json) {
+  var compiler = new Compiler();
+  var ast = new AST();
+  ast.build(json);
+  compiler.compile(ast.tree);
+  return compiler.schema;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast" id="apidoc.element.json-schema-generator.ast">
+        function <span class="apidocSignatureSpan">json-schema-generator.</span>ast
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ast = function () {
+  if (!this instanceof AST) {
+    return new AST();
+  }
+
+  this.tree = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.compiler" id="apidoc.element.json-schema-generator.compiler">
+        function <span class="apidocSignatureSpan">json-schema-generator.</span>compiler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compiler = function () {
+  if (!this instanceof Compiler) {
+    return new Compiler();
+  }
+
+  this.schema = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.toString" id="apidoc.element.json-schema-generator.toString">
+        function <span class="apidocSignatureSpan">json-schema-generator.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator.ast" id="apidoc.module.json-schema-generator.ast">module json-schema-generator.ast</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.ast" id="apidoc.element.json-schema-generator.ast.ast">
+        function <span class="apidocSignatureSpan">json-schema-generator.</span>ast
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ast = function () {
+  if (!this instanceof AST) {
+    return new AST();
+  }
+
+  this.tree = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator.ast.prototype" id="apidoc.module.json-schema-generator.ast.prototype">module json-schema-generator.ast.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.prototype.build" id="apidoc.element.json-schema-generator.ast.prototype.build">
+        function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>build
+        <span class="apidocSignatureSpan">(json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function (json) {
+  if (json instanceof Array) {
+    this.buildArrayTree(this.tree, json);
+  } else {
+    this.buildObjectTree(this.tree, json);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.prototype.buildArrayTree" id="apidoc.element.json-schema-generator.ast.prototype.buildArrayTree">
+        function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>buildArrayTree
+        <span class="apidocSignatureSpan">(tree, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildArrayTree = function (tree, node) {
+  tree.type = 'array';
+  tree.children = {};
+  var first = node[0];
+  if (utils.isObject(first)) {
+    var similar = this.isAllSimilarObjects(node);
+    if (this.isAllSimilarObjects(node)) {
+      tree.uniqueItems = true;
+      tree.minItems = 1;
+
+      return this.buildObjectTree(tree, similar.selected);
+    }
+  };
+
+  for (var i=0; i&lt;node.length; i++) {
+    if (utils.isObject(node[i])) {
+      tree.children[i] = {};
+      tree.children[i].type = 'object';
+      var keys = Object.keys(node[i]);
+      if (keys.length &gt; 0) {
+        tree.children[i].required = true;
+      }
+      this.buildObjectTree(tree.children[i], node[i]);
+    } else if (utils.isArray(node[i])) {
+      tree.children[i] = {};
+      tree.children[i].type = 'array';
+      tree.children[i].uniqueItems = true;
+      if (node[i].length &gt; 0) {
+        tree.children[i].required = true;
+      }
+      this.buildArrayTree(tree.children[i], node[i]);
+    } else {
+      if (tree.type === 'object') {
+        tree.children[i] = {};
+        this.buildPrimitive(tree.children[i], node[i]);
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  for (var i in node) {
+    if (utils.isObject(node[i])) {
+      tree.children[i] = {};
+      this.buildObjectTree(tree.children[i], node[i]);
+      continue;
+    } else if (utils.isArray(node[i])) {
+      tree.children[i] = {};
+      this.<span class="apidocCodeKeywordSpan">buildArrayTree</span>(tree.children[i], node[i]);
+    } else {
+      tree.children[i] = {};
+      this.buildPrimitive(tree.children[i], node[i]);
+    }
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.prototype.buildObjectTree" id="apidoc.element.json-schema-generator.ast.prototype.buildObjectTree">
+        function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>buildObjectTree
+        <span class="apidocSignatureSpan">(tree, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildObjectTree = function (tree, node) {
+  tree.type = tree.type || 'object';
+  tree.children = tree.children || {};
+  for (var i in node) {
+    if (utils.isObject(node[i])) {
+      tree.children[i] = {};
+      this.buildObjectTree(tree.children[i], node[i]);
+      continue;
+    } else if (utils.isArray(node[i])) {
+      tree.children[i] = {};
+      this.buildArrayTree(tree.children[i], node[i]);
+    } else {
+      tree.children[i] = {};
+      this.buildPrimitive(tree.children[i], node[i]);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+AST.prototype.buildObjectTree = function(tree, node) {
+tree.type = tree.type || 'object';
+tree.children = tree.children || {};
+for (var i in node) {
+  if (utils.isObject(node[i])) {
+    tree.children[i] = {};
+    this.<span class="apidocCodeKeywordSpan">buildObjectTree</span>(tree.children[i], node[i]);
+    continue;
+  } else if (utils.isArray(node[i])) {
+    tree.children[i] = {};
+    this.buildArrayTree(tree.children[i], node[i]);
+  } else {
+    tree.children[i] = {};
+    this.buildPrimitive(tree.children[i], node[i]);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.prototype.buildPrimitive" id="apidoc.element.json-schema-generator.ast.prototype.buildPrimitive">
+        function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>buildPrimitive
+        <span class="apidocSignatureSpan">(tree, node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildPrimitive = function (tree, node) {
+  tree.type = utils.getType(node);
+  if (tree.type === 'string') {
+    tree.minLength = (node.length &gt; 0) ? 1 : 0;
+  }
+
+  if (node !== null &amp;&amp; typeof node !== 'undefined') {
+    tree.required = true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      this.buildObjectTree(tree.children[i], node[i]);
+      continue;
+    } else if (utils.isArray(node[i])) {
+      tree.children[i] = {};
+      this.buildArrayTree(tree.children[i], node[i]);
+    } else {
+      tree.children[i] = {};
+      this.<span class="apidocCodeKeywordSpan">buildPrimitive</span>(tree.children[i], node[i]);
+    }
+  }
+};
+
+/**
+Inspect array elements apply the correct
+type and mark as required if the element has
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.prototype.generateHash" id="apidoc.element.json-schema-generator.ast.prototype.generateHash">
+        function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>generateHash
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateHash = function (value) {
+ if (utils.isObject(value)) {
+    var keys = Object.keys(value);
+    return crypto.createHash("md5").update(JSON.stringify(keys)).digest("hex");
+  } else if (utils.Array(value)) {
+    return crypto.createHash("md5").update(JSON.stringify(value)).digest("hex");
+  } else {
+    return crypto.createHash("md5").update(value).digest("hex");
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+@return {Object}
+*/
+AST.prototype.isAllSimilarObjects = function(node) {
+var hashes = [];
+var max = 0;
+var selected = null;
+for (var i in node) {
+  var hash = this.<span class="apidocCodeKeywordSpan">generateHash</span>(node[i]);
+  hashes[hash] = true;
+  var keys = Object.keys(node[i]);
+  if (!max || keys.length &gt; max) {
+    max = keys.length;
+    selected = node[i];
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.ast.prototype.isAllSimilarObjects" id="apidoc.element.json-schema-generator.ast.prototype.isAllSimilarObjects">
+        function <span class="apidocSignatureSpan">json-schema-generator.ast.prototype.</span>isAllSimilarObjects
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAllSimilarObjects = function (node) {
+  var hashes = [];
+  var max = 0;
+  var selected = null;
+  for (var i in node) {
+    var hash = this.generateHash(node[i]);
+    hashes[hash] = true;
+    var keys = Object.keys(node[i]);
+    if (!max || keys.length &gt; max) {
+      max = keys.length;
+      selected = node[i];
+    }
+  }
+
+  return {same: (hashes.length === 1), selected: selected};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+@param {Node} node The JSON node being inspected
+*/
+AST.prototype.buildArrayTree = function(tree, node) {
+tree.type = 'array';
+tree.children = {};
+var first = node[0];
+if (utils.isObject(first)) {
+  var similar = this.<span class="apidocCodeKeywordSpan">isAllSimilarObjects</span>(node);
+  if (this.isAllSimilarObjects(node)) {
+    tree.uniqueItems = true;
+    tree.minItems = 1;
+
+    return this.buildObjectTree(tree, similar.selected);
+  }
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator.compiler" id="apidoc.module.json-schema-generator.compiler">module json-schema-generator.compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.compiler.compiler" id="apidoc.element.json-schema-generator.compiler.compiler">
+        function <span class="apidocSignatureSpan">json-schema-generator.</span>compiler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compiler = function () {
+  if (!this instanceof Compiler) {
+    return new Compiler();
+  }
+
+  this.schema = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator.compiler.prototype" id="apidoc.module.json-schema-generator.compiler.prototype">module json-schema-generator.compiler.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.compiler.prototype.compile" id="apidoc.element.json-schema-generator.compiler.prototype.compile">
+        function <span class="apidocSignatureSpan">json-schema-generator.compiler.prototype.</span>compile
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (tree) {
+  if (tree.type === 'object') {
+   this.schema = {
+    '$schema': 'http://json-schema.org/draft-04/schema#'
+    ,description: ''
+    ,type: 'object'
+    ,properties: {}
+    ,required: []
+   };
+   this.generate(tree, this.schema.properties, this.schema);
+  } else {
+    this.schema = {
+      type: 'array'
+      ,'$schema': 'http://json-schema.org/draft-04/schema#'
+      ,'description': ''
+      ,minItems: 1
+      ,uniqueItems: true
+      ,items: {
+        type: 'object'
+        ,required: []
+        ,properties: {}
+      }
+    };
+
+    this.generate(tree, this.schema.items.properties, this.schema.items);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.compiler.prototype.generate" id="apidoc.element.json-schema-generator.compiler.prototype.generate">
+        function <span class="apidocSignatureSpan">json-schema-generator.compiler.prototype.</span>generate
+        <span class="apidocSignatureSpan">(tree, schema, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (tree, schema, parent) {
+  for (var i in tree.children) {
+    var child = tree.children[i];
+    if (child.type === 'object') {
+      if (utils.isArray(parent.required)) {
+        parent.required.push(i);
+      }
+      schema[i] = {
+        type: 'object'
+        ,properties: {}
+        ,required: []
+      };
+      this.generate(child, schema[i].properties, schema[i]);
+    } else if (child.type === 'array') {
+      if (utils.isArray(parent.required)) {
+        parent.required.push(i);
+      }
+      schema[i] = {
+        type: 'array'
+        ,uniqueItems: child.uniqueItems
+        ,minItems: child.minItems
+        ,items: {
+          required:[]
+          ,properties: {}
+        }
+      }
+      this.generate(child, schema[i].items.properties, schema[i]);
+    } else {
+      schema[i] = {};
+      if (child.type) {
+        schema[i].type = child.type;
+      }
+
+      if (child.minLength) {
+        schema[i].minLength = child.minLength;
+      }
+
+      if (child.required) {
+        if (parent.items &amp;&amp; utils.isArray(parent.items.required)) {
+          parent.items.required.push(i);
+        } else {
+          parent.required.push(i);
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    parent.required.push(i);
+  }
+  schema[i] = {
+    type: 'object'
+    ,properties: {}
+    ,required: []
+  };
+  this.<span class="apidocCodeKeywordSpan">generate</span>(child, schema[i].properties, schema[i]);
+} else if (child.type === 'array') {
+  if (utils.isArray(parent.required)) {
+    parent.required.push(i);
+  }
+  schema[i] = {
+    type: 'array'
+    ,uniqueItems: child.uniqueItems
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator.toString" id="apidoc.module.json-schema-generator.toString">module json-schema-generator.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.toString.toString" id="apidoc.element.json-schema-generator.toString.toString">
+        function <span class="apidocSignatureSpan">json-schema-generator.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-schema-generator.utils" id="apidoc.module.json-schema-generator.utils">module json-schema-generator.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.getType" id="apidoc.element.json-schema-generator.utils.getType">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>getType
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getType = function (data) {
+  if (exports.isObject(data)) {
+    return 'object';
+  } else if (exports.isArray(data)) {
+    return 'array';
+  } else if (exports.isNull(data)) {
+    return null;
+  } else if (exports.isBoolean(data)) {
+    return 'boolean';
+  } else if (exports.isString(data)) {
+    return 'string';
+  } else if (exports.isNumber(data)) {
+    return 'number';
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+@method buildPrimitive
+@param {Object} tree Schema which represents the node
+@param {Node} node The JSON node being inspected
+@return void
+*/
+AST.prototype.buildPrimitive = function(tree, node) {
+tree.type = utils.<span class="apidocCodeKeywordSpan">getType</span>(node);
+if (tree.type === 'string') {
+  tree.minLength = (node.length &gt; 0) ? 1 : 0;
+}
+
+if (node !== null &amp;&amp; typeof node !== 'undefined') {
+  tree.required = true;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isArray" id="apidoc.element.json-schema-generator.utils.isArray">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isArray
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isArray = function (value) {
+  return (value instanceof Array);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+tree.type = tree.type || 'object';
+tree.children = tree.children || {};
+for (var i in node) {
+  if (utils.isObject(node[i])) {
+    tree.children[i] = {};
+    this.buildObjectTree(tree.children[i], node[i]);
+    continue;
+  } else if (utils.<span class="apidocCodeKeywordSpan">isArray</span>(node[i])) {
+    tree.children[i] = {};
+    this.buildArrayTree(tree.children[i], node[i]);
+  } else {
+    tree.children[i] = {};
+    this.buildPrimitive(tree.children[i], node[i]);
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isBoolean" id="apidoc.element.json-schema-generator.utils.isBoolean">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isBoolean
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBoolean = function (value) {
+  return (value === true || value === false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.getType = function(data) {
+  if (exports.isObject(data)) {
+    return 'object';
+  } else if (exports.isArray(data)) {
+    return 'array';
+  } else if (exports.isNull(data)) {
+    return null;
+  } else if (exports.<span class="apidocCodeKeywordSpan">isBoolean</span>(data)) {
+    return 'boolean';
+  } else if (exports.isString(data)) {
+    return 'string';
+  } else if (exports.isNumber(data)) {
+    return 'number';
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isEqual" id="apidoc.element.json-schema-generator.utils.isEqual">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isEqual
+        <span class="apidocSignatureSpan">(v1, v2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEqual = function (v1, v2) {
+  if (typeof v1 !== typeof v2 || exports.oneIsNull(v1, v2)) {
+    return false;
+  }
+
+  if (typeof v1 === typeof "" || typeof v1 === typeof 0) {
+    return v1 === v2;
+  }
+
+  var _isEqual = true;
+
+  if (typeof v1 === typeof {}) {
+    var compare = function(value1, value2) {
+      for (var i in value1) {
+        if (!value2.hasOwnProperty(i)) {
+          _isEqual = false;
+          break;
+        }
+
+        if (exports.isObject(value1[i])) {
+          compare(value1[i], value2[i]);
+        } else if (typeof value1[i] === typeof "") {
+          if (value1[i] !== value2[i]) {
+            _isEqual = false;
+            break;
+          }
+        }
+      }
+    }
+
+    compare(v1, v2);
+  }
+
+  return _isEqual;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isFunction" id="apidoc.element.json-schema-generator.utils.isFunction">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isFunction
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFunction = function (fn) {
+  return (typeof fn === 'function');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isNull" id="apidoc.element.json-schema-generator.utils.isNull">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isNull
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNull = function (value) {
+  return (null === value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.getType = function(data) {
+if (exports.isObject(data)) {
+  return 'object';
+} else if (exports.isArray(data)) {
+  return 'array';
+} else if (exports.<span class="apidocCodeKeywordSpan">isNull</span>(data)) {
+  return null;
+} else if (exports.isBoolean(data)) {
+  return 'boolean';
+} else if (exports.isString(data)) {
+  return 'string';
+} else if (exports.isNumber(data)) {
+  return 'number';
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isNumber" id="apidoc.element.json-schema-generator.utils.isNumber">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isNumber
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNumber = function (value) {
+  return !exports.isArray( value ) &amp;&amp; (value - parseFloat( value ) + 1) &gt;= 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return 'array';
+  } else if (exports.isNull(data)) {
+    return null;
+  } else if (exports.isBoolean(data)) {
+    return 'boolean';
+  } else if (exports.isString(data)) {
+    return 'string';
+  } else if (exports.<span class="apidocCodeKeywordSpan">isNumber</span>(data)) {
+    return 'number';
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isObject" id="apidoc.element.json-schema-generator.utils.isObject">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isObject
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isObject = function (value) {
+  return (null !== value &amp;&amp; typeof value === typeof {} &amp;&amp; !exports.isArray(value));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Computes the hex hash of the given value
+
+@method generateHash
+@param {Mixed} value Value to hash
+@return {String} HEX value.
+*/
+AST.prototype.generateHash = function(value) {
+if (utils.<span class="apidocCodeKeywordSpan">isObject</span>(value)) {
+   var keys = Object.keys(value);
+   return crypto.createHash("md5").update(JSON.stringify(keys)).digest("hex");
+ } else if (utils.Array(value)) {
+   return crypto.createHash("md5").update(JSON.stringify(value)).digest("hex");
+ } else {
+   return crypto.createHash("md5").update(value).digest("hex");
+ }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isString" id="apidoc.element.json-schema-generator.utils.isString">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isString
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isString = function (value) {
+  return (typeof value === typeof '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return 'object';
+  } else if (exports.isArray(data)) {
+    return 'array';
+  } else if (exports.isNull(data)) {
+    return null;
+  } else if (exports.isBoolean(data)) {
+    return 'boolean';
+  } else if (exports.<span class="apidocCodeKeywordSpan">isString</span>(data)) {
+    return 'string';
+  } else if (exports.isNumber(data)) {
+    return 'number';
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.isUndefined" id="apidoc.element.json-schema-generator.utils.isUndefined">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>isUndefined
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUndefined = function (val) {
+  return (null === val || typeof val === 'undefined');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.oneIsNull" id="apidoc.element.json-schema-generator.utils.oneIsNull">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>oneIsNull
+        <span class="apidocSignatureSpan">(v1, v2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oneIsNull = function (v1, v2) {
+  return ((v1 === null &amp;&amp; v2 !== null) || (v1 !== null &amp;&amp; v2 === null));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.isFunction = function(fn) {
+return (typeof fn === 'function');
+};
+
+exports.isEqual = function(v1, v2) {
+if (typeof v1 !== typeof v2 || exports.<span class="apidocCodeKeywordSpan">oneIsNull</span>(v1, v2)) {
+  return false;
+}
+
+if (typeof v1 === typeof "" || typeof v1 === typeof 0) {
+  return v1 === v2;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-schema-generator.utils.toObject" id="apidoc.element.json-schema-generator.utils.toObject">
+        function <span class="apidocSignatureSpan">json-schema-generator.utils.</span>toObject
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toObject = function (arr) {
+  var rv = {};
+  for (var i = 0; i &lt; arr.length; ++i)
+    rv[i] = arr[i];
+  return rv;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
