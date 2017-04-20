@@ -1,4 +1,7 @@
-# api documentation for  [json-schema-generator (v2.0.3)](https://github.com/krg7880/json-schema-generator)  [![npm package](https://img.shields.io/npm/v/npmdoc-json-schema-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-json-schema-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-json-schema-generator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-json-schema-generator)
+# npmdoc-json-schema-generator
+
+#### api documentation for  [json-schema-generator (v2.0.3)](https://github.com/krg7880/json-schema-generator)  [![npm package](https://img.shields.io/npm/v/npmdoc-json-schema-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-json-schema-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-json-schema-generator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-json-schema-generator)
+
 #### JSON schema generator based on draft-v4.
 
 [![NPM](https://nodei.co/npm/json-schema-generator.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/json-schema-generator)
@@ -18,15 +21,21 @@
 ```json
 
 {
-    "author": {
-        "name": "Kirk Gordon"
+    "name": "json-schema-generator",
+    "version": "2.0.3",
+    "description": "JSON schema generator based on draft-v4.",
+    "main": "./index.js",
+    "directories": {
+        "test": "test"
     },
     "bin": {
         "json-schema-generator": "./bin/cli.js"
     },
+    "readmeFilename": "Readme.md",
     "bugs": {
         "url": "https://github.com/krg7880/json-schema-generator/issues"
     },
+    "homepage": "https://github.com/krg7880/json-schema-generator",
     "dependencies": {
         "json-promise": "^1.1.8",
         "mkdirp": "^0.5.0",
@@ -34,7 +43,6 @@
         "pretty-data": "^0.40.0",
         "request": "^2.47.0"
     },
-    "description": "JSON schema generator based on draft-v4.",
     "devDependencies": {
         "chai": "^1.9.2",
         "chai-json-schema": "^1.1.0",
@@ -46,15 +54,9 @@
         "mocha": "^1.21.4",
         "node-stubby-server-cli": "^1.0.0"
     },
-    "directories": {
-        "test": "test"
+    "scripts": {
+        "test": "gulp"
     },
-    "dist": {
-        "shasum": "e1a77df63cd0db4e1c8dfac03e08e2e4781502d3",
-        "tarball": "https://registry.npmjs.org/json-schema-generator/-/json-schema-generator-2.0.3.tgz"
-    },
-    "gitHead": "e0936e7e41e9ed73256e97a28627e5d1dd6408d5",
-    "homepage": "https://github.com/krg7880/json-schema-generator",
     "keywords": [
         "json schema",
         "json schema generator",
@@ -64,19 +66,8 @@
         "draft",
         "v4"
     ],
-    "license": "MIT",
-    "main": "./index.js",
-    "maintainers": [
-        {
-            "name": "krg7880"
-        }
-    ],
-    "name": "json-schema-generator",
-    "optionalDependencies": {},
-    "scripts": {
-        "test": "gulp"
-    },
-    "version": "2.0.3"
+    "author": "Kirk Gordon<kirk7880@gmail.com>",
+    "license": "MIT"
 }
 ```
 
